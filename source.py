@@ -1,7 +1,7 @@
 # Script for reading status of local linux hosts
 
 ## NOTES ##
-
+# git integration test
 
 
 import socket  # Used to read system info from host
