@@ -27,12 +27,15 @@ def disk_free():
     free_space = commands.getstatusoutput("df -k | grep 'sd..'")
     return free_space
 
+def get_ip():
+    ip = commands.getstatusoutput("ifconfig | grep 'inet addr:'")
+    return ip
+
 exit_sequence = 0  # Defines the exit sequence to 0 so the loop can run
 while exit_sequence != "exit":  # Run the loop until the user says to exit using user_prompt():
 
-
     hostname = socket.gethostname()  # Gets the hostname of the system
-    ip_address = socket.gethostbyname(socket.gethostname())  # Gets the IP of the host
+    ip_address = get_ip()  # Gets the IP of the host
     disk_space = disk_free()  # Uses the hdd1 variable (path to disk 1) to get the amount of used storage
 
     # For debug use
