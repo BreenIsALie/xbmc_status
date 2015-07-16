@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/source.py" line="40" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f372d43-2793-4ef1-bc8d-a8e6a5559007" name="Default" comment="Added function for printing active ip addresses">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source2.py" afterPath="$PROJECT_DIR$/source2.py" />
+    <list default="true" id="0f372d43-2793-4ef1-bc8d-a8e6a5559007" name="Default" comment="* Removed source.py (non functional)&#10;* Renamed source2 to source.py, new main function">
+      <change type="MOVED" beforePath="C:\Users\Sickan\PycharmProjects\xbmc_status\source2.py" afterPath="$PROJECT_DIR$/source.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xbmc_status.iws" />
@@ -27,20 +24,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="source.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="source.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="62" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="62" />
-              <folding>
-                <element signature="e#65#116#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="source2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.27687296">
               <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
@@ -91,7 +76,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -102,7 +87,30 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xbmc_status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xbmc_status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xbmc_status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -157,7 +165,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="xbmc_status" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source2.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Sickan\PycharmProjects\xbmc_status\source.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -366,14 +374,20 @@
       <option name="project" value="LOCAL" />
       <updated>1437068647053</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added functionality for checking system version, system time and memory statistics">
+      <created>1437072073175</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1437072073175</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1265625" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1265625" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41458333" sideWeight="0.50208336" order="3" side_tool="true" content_ui="tabs" />
@@ -435,7 +449,8 @@
     <MESSAGE value="Fixed the ability to check the hdd use. Functional with hostname and hdd use discovery. More function to be added" />
     <MESSAGE value="Added comments to the code" />
     <MESSAGE value="Added function for printing active ip addresses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added function for printing active ip addresses" />
+    <MESSAGE value="Added functionality for checking system version, system time and memory statistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality for checking system version, system time and memory statistics" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -447,16 +462,6 @@
     <entry file="file://$PROJECT_DIR$/source.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="62" />
-          <folding>
-            <element signature="e#65#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#414#486#0" expanded="true" />
@@ -473,72 +478,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="62" />
-          <folding>
-            <element signature="e#65#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#414#486#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_monkey.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="62" />
-          <folding>
-            <element signature="e#65#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#414#486#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_monkey.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="62" />
-          <folding>
-            <element signature="e#65#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -561,8 +500,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#65#116#0" expanded="true" />
+            <element signature="e#414#486#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_monkey.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -571,8 +518,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#65#116#0" expanded="true" />
+            <element signature="e#414#486#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_monkey.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -592,16 +547,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="62" />
-          <folding>
-            <element signature="e#65#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27687296">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
