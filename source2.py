@@ -3,20 +3,23 @@ __author__ = 'BreenIsALie'
 
 ## NOTES ##
 # The "Ask to exit" functionality has been disabled, easier to just re-run the command. Might re-enable. Kept for now
-# Current functionality:    Gets Hostname
-#                           Gets HDD Usage
-#                           Gets IP addresses
+# Functionality:    Hostname
+#                   HDD Usage
+#                   IP addresses
+#                   System version
+#                   Current system time
+#                   Memory statistics
 
 
 import subprocess   # Needed to run linux commands using subprocess.call
 import socket       # Used to get the hostname
 from sys import argv    # Used to take arguments from the command line when starting the script (currently just name)
 import time             # Used for the time.sleep() function
-
+import platform
 
 script_name = argv  # saves the script name as a variable, used in the message at the end. Not *strictly* neccessary
 
-def get_hostname(): # Gets the hostname and returns it to the main program
+def get_hostname():  # Gets the hostname and returns it to the main program
     host = socket.gethostname()
     return host
 
@@ -28,7 +31,7 @@ def get_main_disk_usage():  # Runs the linux command df -h to get an overview ov
 def get_ip_addresses():
     p3 = subprocess.Popen((["ifconfig"]), stdout=subprocess.PIPE)
     p4 = subprocess.Popen((["grep", "inet addr"]), stdin=p3.stdout)
-    print "\nIP ADDRESSES:\n"
+    print "\nIP ADDRESSES:"
 
 
 def user_interaction(name):  # Used as"what now" question at the end. Allows refresh (press enter) or exit (type exit)
@@ -36,16 +39,31 @@ def user_interaction(name):  # Used as"what now" question at the end. Allows ref
     user_input = raw_input("> ")
     return user_input
 
+def get_mem_usage():
+    vmstat = subprocess.Popen((["vmstat", "-s", "-S", "M"]),stdout=subprocess.PIPE)
+    head = subprocess.Popen((["head"]), stdin=vmstat.stdout)
+
 if __name__ == '__main__':  # Main function goes here
-    # exit_condition = 0  # Initializes the exit condition as 0, if it turns into "exit" the loop finishes
-    # while exit_condition != "exit":  # run while exit condition isn't "exit"
         hostname = get_hostname()
 
-        print "\n"  # For readability, gets some space between text above and script text
+        print "\n\n-----------------------------------------------------------------------------\n\n"  # For readability
         print "HOSTNAME: %s" "\n" % hostname    # Prints the hostname
-        print "DISK USAGE: "
+
+        sys_info = platform.platform()
+        print "SYSTEM: %s" % sys_info
+
+        sys_time = time.asctime()
+        print "\nSYSTEM TIME: %s" % sys_time
+
+        get_mem_usage()
+        print"\nMEMORY USAGE: \n"
+        time.sleep(0.1)
+
+        print "\nDISK USAGE: "
         get_main_disk_usage()                   # Prints the output of df-h. Maybe trim a bit in later versions
+
         get_ip_addresses()
 
-        time.sleep(0.1)  # Holds script for 0.1 second, otherwise disk usage print interrupts the user prompt
-        # exit_condition = user_interaction(script_name)  # Checks if user wants to exit, or run the script again
+        time.sleep(0.1)  # Holds script for 0.1 second, stopping the script from outpacing linux commands
+        print "\n\n-----------------------------------------------------------------------------\n\n"  # For readability
+
