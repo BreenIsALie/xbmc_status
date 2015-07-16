@@ -23,8 +23,10 @@ def user_prompt():  # Asks the user if to shutdown or refresh. Also used to keep
     return user_input
 
 def disk_free():
-    #free_space = subprocess.Popen("df -k / | grep 'sd..'", stdout=subprocess.PIPE .communicate()[0])
-    free_space = commands.getstatusoutput("df -k | grep 'sd..'")
+    # free_space = commands.getstatusoutput("df -k | grep 'sd..'")
+    process = subprocess.Popen(["df -k | grep 'sd.."], shell=False, stdout=subprocess.PIPE)
+    data = process.communicate()
+    free_space = int(data[0].spilit()[5][1:3])
     return free_space
 
 def get_ip():
