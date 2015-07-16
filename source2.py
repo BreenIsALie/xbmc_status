@@ -21,7 +21,7 @@ def get_hostname():
     return hostname
 
 def get_main_disk_usage():
-    disk_use = subprocess.Popen(["ifconfig | grep 'inet addr:'"], shell=False, stdout=subprocess.PIPE)
+    disk_use = subprocess.Popen(["df", "-h"], shell=False, stdout=subprocess.PIPE)
     return disk_use
 
 def user_interaction(name):
