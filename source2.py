@@ -7,7 +7,7 @@ import commands
 import subprocess
 import socket
 from sys import argv
-from subprocess import check_output
+
 
 script_name = argv
 
@@ -15,10 +15,6 @@ def user_prompt():  # Asks the user if to shutdown or refresh. Also used to keep
     print("Press enter to refresh the program, or type exit to end the program")
     user_input = raw_input(">> ")
     return user_input
-
-def get_ip():
-    ip_addr = check_output(["ifconfig", "grep 'inet addr:'"])
-    return ip_addr
 
 def get_hostname():
     hostname = socket.gethostname()
@@ -36,10 +32,9 @@ def user_interaction(name):
 if __name__ == '__main__':
     exit_condition = 0
     while exit_condition != "exit":
-        exit_condition = user_interaction(script_name)
-
         hostname = get_hostname()
-        ip = get_ip()
+        hdd_usage = get_main_disk_usage()
 
         print "HOSTNAME: %s" % hostname
-        print "IP: '{0}'" .format(ip)
+        print "HDD Usage: %s" % hdd_usage
+        exit_condition = user_interaction(script_name)
